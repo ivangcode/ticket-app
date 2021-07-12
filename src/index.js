@@ -2,7 +2,7 @@
 import React from 'react';
 // Analog to appendChild.
 import ReactDOM from 'react-dom';
-import Badge from './Components/Badge'
+import Badge from './components/Badge'
 
 
 const container = document.getElementById('app');
