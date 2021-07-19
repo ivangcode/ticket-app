@@ -11,11 +11,19 @@ import "./styles/BadgeNew.css";
 
 // Render
 class BadgeNew extends React.Component {
+  // README
 
-  state = { form : {}}
+  state = {
+    form: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      jobTitle: "",
+      twitter: "",
+    },
+  };
 
-  handleChange = event => {
-
+  handleChange = (event) => {
     // Disable overwritten on the form.
     const nextForm = this.state.form;
     nextForm[event.target.name] = event.target.value;
@@ -25,9 +33,9 @@ class BadgeNew extends React.Component {
       form: {
         ...this.state.form,
         [event.target.name]: event.target.value,
-      }
+      },
     });
-  }
+  };
 
   render() {
     return (
@@ -48,8 +56,11 @@ class BadgeNew extends React.Component {
               ></Badge>
             </div>
 
-            <div className="col">                
-              <BadgeForm onChange={this.handleChange} />
+            <div className="col">
+              <BadgeForm
+                onChange={this.handleChange}
+                formValues={this.state.form}
+              />
             </div>
           </div>
         </div>
