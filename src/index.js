@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 // Pages.
 import BadgeNew from "./pages/BadgeNew";
 // CSS files.
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.css";
 
 const container = document.getElementById("app");
