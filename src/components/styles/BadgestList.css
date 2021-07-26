@@ -1,0 +1,61 @@
+.badges-item__container {
+  background: #FFFFFD;
+  box-shadow: -1px 3px 6px 1px rgba(150, 150, 150, 0.25);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  min-width: 300px;
+}
+
+.badges-item__image {
+  border-radius: 50px;
+  width: 100%;
+}
+
+/* The next block */
+
+.badges-item__user {
+  margin: 10px 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  height: auto;
+  text-align: left;
+}
+.badges-item__name, .badges-item__twitter, .badges-item__jobTitle {
+  margin: 0;
+}
+
+.badges-item__name {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.badges-item__twitter {
+  color: #47a1dd;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.badges-item__twitter p {
+  margin: 0;
+}
+
+.badges-item__jobTitle {
+  font-size: .8rem;
+}
+
+.twitterIcon {
+  background-image: url('https://img.icons8.com/color/452/twitter--v1.png');
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  display: inline-block;
+}
