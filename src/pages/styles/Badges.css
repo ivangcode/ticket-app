@@ -1,7 +1,7 @@
 @import url(https://areyouivan.github.io/first-reactProject/src/pages/styles/Badges.css);
 
 .Badges__buttons {
-  max-width: 555px;
+  max-width: 548px;
   min-width: 300px;
   margin: 0 auto;
 }
@@ -9,7 +9,6 @@
 .btn {
   /* Most suitable option */
   box-shadow: 0px 4px 2px #618834;
-  margin: 5px;
   width: 200px;
   min-width: 100px;
 
@@ -24,4 +23,8 @@ position: static; */
   /* margin: 0 35%;
 display: flex;
 justify-content: flex-end; */
+}
+
+.Badges_conf-logo {
+  width: 55%;
 }
