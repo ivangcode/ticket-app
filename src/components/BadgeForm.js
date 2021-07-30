@@ -22,64 +22,74 @@ class BadgeForm extends React.Component {
     console.log(this.state);
   };
 
+  width = {
+    width: '60%',
+    minWidth: '280px',
+  };
+
   render() {
     return (
       <div>
         <h1>New Attendant</h1>
 
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>First Name</label>
+          <div className="mb-2">
             <input
               /* Events  */
               onChange={this.props.onChange}
               type="text"
               className="form-control"
               name="firstName"
+              placeholder="First Name"
+              style={this.width}
               // To avoid our information gets copied.
               // Connecting with BadgeNew.
               value={this.props.formValues.firstName}
             />
           </div>
 
-          <div className="form-group">
-            <label>Last Name</label>
+          <div className="mb-2">
             <input
               onChange={this.props.onChange}
               type="text"
               className="form-control"
               name="lastName"
+              placeholder="Last Name"
               value={this.props.formValues.lastName}
+              style={this.width}
             />
           </div>
-          <div className="form-group">
-            <label>Email</label>
+          <div className="mb-2">
             <input
               onChange={this.props.onChange}
               type="email"
               className="form-control"
               name="email"
+              placeholder="Email"
               value={this.props.formValues.email}
+              style={this.width}
             />
           </div>
-          <div className="form-group">
-            <label>Twitter</label>
+          <div className="mb-2">
             <input
               onChange={this.props.onChange}
               type="text"
               className="form-control"
               name="twitter"
+              placeholder="Twitter"
               value={this.props.formValues.twitter}
+              style={this.width}
             />
           </div>
-          <div className="form-group">
-            <label>Job Title</label>
+          <div className="mb-2">
             <input
               onChange={this.props.onChange}
               type="text"
               className="form-control"
               name="jobTitle"
+              placeholder="Job Title"
               value={this.props.formValues.jobTitle}
+              style={this.width}
             />
           </div>
 
@@ -88,6 +98,7 @@ class BadgeForm extends React.Component {
             /* Button has also events, we may call them with onClick */
             onClick={this.handleClick}
             className="btn btn-primary"
+            style={{ margin: "20px 58px" }}
           >
             Save
           </button>

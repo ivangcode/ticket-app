@@ -39,8 +39,7 @@ class BadgeNew extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar />
+      <React.Fragment>
         <div className="BadgeNew__hero">
           <img className="img-fluid" src={logo} alt="Logo" />
         </div>
@@ -51,7 +50,7 @@ class BadgeNew extends React.Component {
                 firstName={this.state.form.firstName}
                 lastName={this.state.form.lastName}
                 twitter={this.state.form.twitter}
-                jobTitle={this.state.form.jobTitle} 
+                jobTitle={this.state.form.jobTitle}
                 avatarUrl="https://pbs.twimg.com/profile_images/1323471263596163073/uVmPhabt_400x400.jpg"
               ></Badge>
             </div>
@@ -64,7 +63,7 @@ class BadgeNew extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

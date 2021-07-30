@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // Utilities.
 import logo from "../images/logo.svg";
 import "./styles/Navbar.css";
@@ -9,12 +10,12 @@ class Navbar extends React.Component {
     return (
       <div className="Navbar">
         <div className="container-fluid"></div>
-        <a className="Navbar__brand" href="/">
+        <Link className="Navbar__brand" to="/">
           <img className="Navbar__brand-logo" src={logo} alt="logo" />
           {/* The span is used to change text properties */}
           <span className="fw-light">Platzi</span>
           <span className="fw-bold">Conf</span>
-        </a>
+        </Link>
       </div>
     );
   }
