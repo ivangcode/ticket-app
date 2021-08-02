@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import './styles/Badges.css'
-import Navbar from '../components/Navbar';
-import confLogo from '../images/badge-header.svg';
-import BadgesList from '../components/BadgesList';
-import { Link } from 'react-router-dom';
+import "./styles/Badges.css";
+// import Navbar from '../components/Navbar';
+import confLogo from "../images/badge-header.svg";
+import BadgesList from "../components/BadgesList";
+import { Link } from "react-router-dom";
 
 class Badges extends React.Component {
   state = {

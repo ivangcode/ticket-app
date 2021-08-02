@@ -1,0 +1,4 @@
+[submodule "platzi-badges"]
+	path = platzi-badges
+	url = git@github.com:Sparragus/platzi-badges.git
+	branch = 13.PracticaComponentLifecycle

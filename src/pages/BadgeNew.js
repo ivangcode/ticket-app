@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components brougth them.
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
 import Badge from '../components/Badge';
 import BadgeForm from "../components/BadgeForm";
 
