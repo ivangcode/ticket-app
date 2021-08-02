@@ -1,0 +1,61 @@
+.header {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.header__start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 50px;
+  min-width: 300px;
+  max-width: 300px;
+}
+.header__start h1 {
+  font-family: lato;
+  font-size: 1.8rem;
+  text-align: left;
+}
+@media (min-width: 1024px, 375px) {
+  .header__start {
+    padding: 0;
+  }
+}
+@media (min-width: 375px) {
+  .header__start {
+    padding: 0;
+  }
+}
+
+.header__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  min-width: 300px;
+}
+
+.astronauts {
+  display: block;
+  width: 100%;
+  min-width: 350px;
+  max-width: 690px;
+}
+
+.platziConf {
+  margin: 25px 2px;
+  display: block;
+  width: 100%;
+  min-width: 300px;
+}
+
+p {
+  font-size: 1.2rem;
+}
