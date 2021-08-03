@@ -18,3 +18,4 @@ const container = document.getElementById("app");
 // ReactDOM.render(__what__, __where__);
 ReactDOM.render(<App />, container);
 // We've settled the props in Badge.
+
