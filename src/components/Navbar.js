@@ -10,7 +10,7 @@ class Navbar extends React.Component {
     return (
       <div className="Navbar">
         <div className="container-fluid"></div>
-        <Link className="Navbar__brand" to="/">
+        <Link className="Navbar__brand" to="/home">
           <img className="Navbar__brand-logo" src={logo} alt="logo" />
           {/* The span is used to change text properties */}
           <span className="fw-light">Platzi</span>
