@@ -1,7 +1,5 @@
 .Home {
-  background-image: url(../../images/stars.svg);
-  background-color: #1b1b25;
-
+  background: linear-gradient(180deg, #1b1b25 0%, #1d3843 100%);
+  font-family: "Noto Sans";
+  height: calc(100vh - 70px);
 }
-
-

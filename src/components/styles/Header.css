@@ -1,10 +1,10 @@
 .header {
-  min-height: calc(100vh - 60px);
-  width: 100%;
+  width: auto;
+  /* height: 100%; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  height: inherit;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .platziConf {
@@ -25,30 +25,69 @@ p {
   color: white;
   padding: 0 50px;
   min-width: 300px;
-  max-width: 300px;
+  height: inherit;
+  width: 30%;
 }
 .header__start h1 {
   font-family: lato;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   text-align: left;
+  /* width: 100%; */
+
+  /* Animation */
+  width: 17.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(17), blink 0.3s step-end infinite alternate;
+  border-right: 2px solid;
+}
+/* Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* end Animation */
+.header__getIn {
+  width: 100%;
+}
+
+.header__getIn p {
+  font-size: 1.7rem;
+  font-weight: 300;
+  width: 35ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(35), blink 0.3s step-end infinite alternate;
+  border-right: 2px solid;
 }
 
 .header__img {
   display: flex;
   flex-direction: column;
+  margin-left: 80px;
+  padding: 30px;
   align-items: center;
   justify-content: center;
-  width: 800px;
-  min-width: 300px;
+  margin-top: 40px;
+  width: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../images/elipse.svg);
 }
 
 .astronauts {
   display: block;
   width: 100%;
   min-width: 350px;
-  max-width: 690px;
+  max-width: 950px;
+  margin: 0 0 100px 50px;
 }
-
 
 @media (min-width: 1024px, 375px) {
   .header__start {
@@ -59,4 +98,47 @@ p {
   .header__start {
     padding: 0;
   }
+}
+
+.header__btn {
+  /* Most suitable option */
+  min-width: 100px;
+  width: 250px;
+  height: 55px;
+  font-size: 32px;
+  font-weight: 300;
+  font-family: "Noto Sans";
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #98ca3f;
+  border-radius: 81px;
+  padding: 0.2rem;
+}
+
+.header__btn:hover {
+  background: #9bcf41;
+  /* color: #ffffff; */
+}
+
+a:hover {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.social-media {
+  position: fixed;
+  width: auto;
+  bottom: 10px;
+  left: 10px;
+}
+
+.facebook {
+  margin: 10px;
+}
+.twitter {
+  margin: 10px;
+}
+.instagram {
+  margin: 10px;
 }

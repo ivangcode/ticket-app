@@ -4,8 +4,9 @@ import "./styles/Badges.css";
 // import Navbar from '../components/Navbar';
 import confLogo from "../images/badge-header.svg";
 import BadgesList from "../components/BadgesList";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 import { Link } from "react-router-dom";
-
 import api from "../api";
 
 class Badges extends React.Component {
@@ -29,17 +30,18 @@ class Badges extends React.Component {
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
-  }
+  };
 
   render() {
     if (this.state.loading) {
-      return "Loading...";
+      let elements = 5;
+      return [...Array(elements)].map((_e, i) => <PageLoading key={i} />);
     }
-    
+
     if (this.state.error) {
-      return `Error: ${this.state.error.message}`;
+      return <PageError error={this.state.error}></PageError>;
     }
-    
+
     return (
       <React.Fragment>
         <div className="Badges">

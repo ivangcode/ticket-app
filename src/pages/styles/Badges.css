@@ -9,8 +9,13 @@
 .btn {
   /* Most suitable option */
   box-shadow: 0px 4px 2px #618834;
-  width: 200px;
   min-width: 100px;
+  font-size: 16px;
+  font-family: 'Noto Sans';
+  
+  min-width: 100px;
+  background: #76a700;
+  border-radius: 81px;
 
   /* First Option */
 

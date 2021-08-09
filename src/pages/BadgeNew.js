@@ -6,7 +6,7 @@ import Badge from '../components/Badge';
 import BadgeForm from "../components/BadgeForm";
 
 // Utilities.
-import logo from '../images/badge-header.svg'
+import logo from '../images/platziconf-logo.svg'
 import "./styles/BadgeNew.css";
 
 // Render
@@ -47,10 +47,10 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col">
               <Badge
-                firstName={this.state.form.firstName}
-                lastName={this.state.form.lastName}
-                twitter={this.state.form.twitter}
-                jobTitle={this.state.form.jobTitle}
+                firstName={this.state.form.firstName || "First Name"}
+                lastName={this.state.form.lastName || "Last Name"}
+                twitter={this.state.form.twitter || "twitter"}
+                jobTitle={this.state.form.jobTitle || "Job Title"}
                 avatarUrl="https://pbs.twimg.com/profile_images/1323471263596163073/uVmPhabt_400x400.jpg"
               ></Badge>
             </div>
