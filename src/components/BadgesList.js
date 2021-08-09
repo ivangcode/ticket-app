@@ -6,6 +6,8 @@ import "./styles/BadgestList.css";
 
 class BadgesList extends React.Component {
   render() {
+    
+    
     if (!this.props.badges.length) {
       return (
         <div>

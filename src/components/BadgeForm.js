@@ -7,7 +7,7 @@ class BadgeForm extends React.Component {
   handleChange = (event) => {
     // I gonna save the State information. [Handle State]
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     });
   };
 
@@ -16,11 +16,11 @@ class BadgeForm extends React.Component {
   };
 
   // Sending the form info. to the state and displaiying in Console.
-  handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(`Form was submitted`);
-    console.log(this.state);
-  };
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(`Form was submitted`);
+  //   console.log(this.state);
+  // };
 
   width = {
     width: '60%',
@@ -32,7 +32,7 @@ class BadgeForm extends React.Component {
       <div>
         <h1>New Attendant</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="mb-2">
             <input
               /* Events  */
@@ -99,6 +99,7 @@ class BadgeForm extends React.Component {
             onClick={this.handleClick}
             className="btn btn-primary"
             style={{ margin: "20px 58px" }}
+            value="Submit"
           >
             Save
           </button>

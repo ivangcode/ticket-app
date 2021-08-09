@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
 
 // Components brougth them.
 // import Navbar from '../components/Navbar';
-import Badge from '../components/Badge';
+import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
+import PageLoading from "../components/PageLoading";
+
+import api from "../api";
 
 // Utilities.
-import logo from '../images/platziconf-logo.svg'
+import logo from "../images/platziconf-logo.svg";
 import "./styles/BadgeNew.css";
 
 // Render
@@ -14,6 +17,8 @@ class BadgeNew extends React.Component {
   // README
 
   state = {
+    loading: false,
+    error: null,
     form: {
       firstName: "",
       lastName: "",
@@ -27,7 +32,7 @@ class BadgeNew extends React.Component {
     // Disable overwritten on the form.
     const nextForm = this.state.form;
     nextForm[event.target.name] = event.target.value;
-
+    
     // Setting the State.
     this.setState({
       form: {
@@ -36,8 +41,24 @@ class BadgeNew extends React.Component {
       },
     });
   };
+  
 
+
+  handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await api.badges.create(this.state.form);
+      this.setState({ loading: false});
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+  
   render() {
+    if(this.state.loading) {
+      return <PageLoading />
+    }
     return (
       <React.Fragment>
         <div className="BadgeNew__hero">
@@ -59,6 +80,7 @@ class BadgeNew extends React.Component {
               <BadgeForm
                 onChange={this.handleChange}
                 formValues={this.state.form}
+                onSubmit={this.handleSubmit}
               />
             </div>
           </div>
