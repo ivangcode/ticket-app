@@ -9,7 +9,7 @@ function Gravatar(props) {
   return (
     <img
       className={props.className}
-      src='https://www.gravatar.com/avatar/3551d360e96f1cdda7a9d8fb20ef6c23.jpg'
+      // src={`https://www.gravatar.com/avatar/${hash}.jpg`}
       alt="Avatar"
     />
   );

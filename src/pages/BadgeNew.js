@@ -32,7 +32,7 @@ class BadgeNew extends React.Component {
     // Disable overwritten on the form.
     const nextForm = this.state.form;
     nextForm[event.target.name] = event.target.value;
-    
+
     // Setting the State.
     this.setState({
       form: {
@@ -41,23 +41,23 @@ class BadgeNew extends React.Component {
       },
     });
   };
-  
-
 
   handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await api.badges.create(this.state.form);
-      this.setState({ loading: false});
+      this.setState({ loading: true });
+
+      this.props.history.push(`/badges`);
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
   };
-  
+
   render() {
-    if(this.state.loading) {
-      return <PageLoading />
+    if (this.state.loading) {
+      return <PageLoading />;
     }
     return (
       <React.Fragment>
@@ -81,6 +81,7 @@ class BadgeNew extends React.Component {
                 onChange={this.handleChange}
                 formValues={this.state.form}
                 onSubmit={this.handleSubmit}
+                error={this.state.error}
               />
             </div>
           </div>
