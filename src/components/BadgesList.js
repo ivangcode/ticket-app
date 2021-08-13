@@ -29,7 +29,7 @@ class BadgesList extends React.Component {
                     className="badges-item__image"
                   />
                 </div>
-              <Link to={`/badges/${badge.id}/edit`} className="text-reset text-decoration-none">
+              <Link to={`/badges/${badge.id}`} className="text-reset text-decoration-none">
                 <div className="badges-item__user">
                   <p className="badges-item__name">
                     {badge.firstName} {badge.lastName}{" "}

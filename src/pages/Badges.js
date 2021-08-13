@@ -18,10 +18,16 @@ class Badges extends React.Component {
 
   // The best place to make an API petition is the componentDidMount()
   componentDidMount() {
-    this.fetchingData();
+    this.fetchData();
+
+    this.intervalId = setInterval(this.fetchData, 5000);
   }
 
-  fetchingData = async () => {
+  componentWillUnmount() {
+    clearInterval(this.intervalId)
+  }
+
+  fetchData = async () => {
     this.setState({ loading: true, error: null });
 
     try {
@@ -33,7 +39,7 @@ class Badges extends React.Component {
   };
 
   render() {
-    if (this.state.loading) {
+    if (this.state.loading && !this.state.data) {
       let elements = 5;
       return [...Array(elements)].map((_e, i) => <PageLoading key={i} />);
     }
@@ -65,6 +71,7 @@ class Badges extends React.Component {
           <div className="Badges__list">
             <div className="Badges__container">
               <BadgesList badges={this.state.data}></BadgesList>
+              {this.state.loading && "Loading.."}
             </div>
           </div>
         </div>
