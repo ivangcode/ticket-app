@@ -7,7 +7,6 @@ function Modal(props) {
   if (!props.isOpen) {
     return null;
   } 
-  console.log(props)
   
   return ReactDOM.createPortal(
     <div className="Modal">

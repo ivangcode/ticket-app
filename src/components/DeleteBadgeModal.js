@@ -9,7 +9,7 @@ function DeleteBadgeModal(props) {
       <div className="DeleteBadgeModal">
         <h3>Are you sure?</h3>
         <p>You're about to delete this badge.</p>
-        <button onClick={props.onDeleteBadge} className="btn btn-danger mr-4">
+        <button onClick={props.onDeleteBadge} className="btn btn-danger">
           Delete
         </button>
         <button onClick={props.onClose} className="btn btn-primary">
