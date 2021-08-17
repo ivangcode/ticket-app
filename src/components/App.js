@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/badges/:badgeId/edit" component={BadgeEdit} />
           <Route exact path="/badges/:badgeId" component={BadgeDetails} />
           <Route exact path="/404" component={NotFound} />
-          <Redirect from="*" to="/404"></Redirect>
+          <Redirect from="/*" to="/404"></Redirect>
         </Switch>
       </Layout>
     </BrowserRouter>

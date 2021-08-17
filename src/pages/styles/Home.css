@@ -1,5 +1,14 @@
 .Home {
   background: linear-gradient(180deg, #1b1b25 0%, #1d3843 100%);
   font-family: "Noto Sans";
+  /* height: 100vh; */
   height: calc(100vh - 70px);
+  /* height: auto; */
 }
+
+@media (max-width: 1012px) {
+  .Home{
+    height: auto;
+  };
+}
+

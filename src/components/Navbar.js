@@ -15,18 +15,15 @@ class Navbar extends React.Component {
           <span className="fw-light">Platzi</span>
           <span className="fw-bold">Conf</span>
         </Link>
-        <div className="d-flex justify-content-center Navbar__bar">
+        {/* <div className="d-flex justify-content-center Navbar__bar">
           <ul className="nav nav-pills flex-column flex-sm-row">
             <Link
-              to="badges/new"
+              to="/badges/new"
               className="flex-sm-fill text-sm-center nav-link active"
             >
               Start Now
             </Link>
-            <Link
-              to="/badges"
-              className="flex-sm-fill text-sm-center nav-link"
-            >
+            <Link to="/badges" className="flex-sm-fill text-sm-center nav-link">
               List
             </Link>
             <Link className="flex-sm-fill text-sm-center nav-link">
@@ -36,7 +33,7 @@ class Navbar extends React.Component {
               Account
             </Link>
           </ul>
-        </div>
+        </div> */}
       </div>
     );
   }

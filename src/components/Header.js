@@ -10,23 +10,28 @@ import twitter from "../images/twitter.svg";
 import instagram from "../images/instagram.svg";
 
 const TITLE = "PRINT YOUR BADGES";
-const TEXT = "The easiest way to manage your conference";
 
 function Header() {
   return (
     <div className="header">
-      <div className="header__start">
-        <img className="platziConf" src={platziConf} alt="" />
-        <div className="header__getIn">
+      <div className="header__col-left">
+        <div className="platziConf__container">
+          <img className="platziConf" src={platziConf} alt="" />
+        </div>
+        <div className="header__text">
           <h1>{TITLE}</h1>
-          <p>{TEXT}</p>
+          <p>
+            The easiest way to manage <br /> your conference
+          </p>
         </div>
         <Link to="/badges" className="header__btn">
           Start Now
         </Link>
       </div>
-      <div className="header__img">
-        <img className="astronauts" src={astronauts} alt="" />
+      <div className="header__col-right">
+        <div className="astronauts__container">
+          <img className="astronauts" src={astronauts} alt="" />
+        </div>
       </div>
       <div className="social-media">
         <a href="https://facebook.com/areyouivan/" alt="facebook">
