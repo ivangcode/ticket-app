@@ -1,21 +1,58 @@
-@import url(https://areyouivan.github.io/first-reactProject/src/pages/styles/Badges.css);
+.Badges {
+  position: relative;
+  background: linear-gradient(180deg, #1b1b25 0%, #1d3843 100%);
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Badges__hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background: url("../../images/stars.svg"), #1b1b25; */
+
+  background-repeat: repeat;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.Badges__logo-container {
+  width: 500px;
+}
+
+.Badges_conf-logo {
+  width: 100%;
+}
 
 .Badges__buttons {
-  max-width: 548px;
-  min-width: 300px;
-  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn_newBadge {
+  bottom: 60px;
+  position: fixed;
+  filter: drop-shadow(-0.729927px 0px 24.0876px #98ca3f);
+  background: #98ca3f;
+  border-radius: 116.987px;
+  width: 400px;
+  height: 80px;
 }
 
 .btn {
   /* Most suitable option */
+  width: 400px;
+  min-width: 100px;
   box-shadow: 0px 4px 2px #618834;
-  min-width: 100px;
-  font-size: 16px;
-  font-family: 'Noto Sans';
-  
-  min-width: 100px;
   background: #76a700;
-  border-radius: 81px;
+  font-size: 16px;
+  font-family: "Noto Sans";
+  border-radius: 116.987px;
 
   /* First Option */
 
@@ -28,8 +65,4 @@ position: static; */
   /* margin: 0 35%;
 display: flex;
 justify-content: flex-end; */
-}
-
-.Badges_conf-logo {
-  width: 55%;
 }

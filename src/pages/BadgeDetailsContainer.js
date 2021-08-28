@@ -11,16 +11,18 @@ import BadgeDetails from "./BadgeDetails";
 // This page was made to show the user details. It mean read the data.
 
 class BadgeDetailsContainer extends React.Component {
-  // To request Data remeber that:
-  // We got to initiliaze State
-  // Then in write the fetch in the Mount
-  // Into the fetch define the path of the data and the try-catch
-  // At last set the loader and the error conditionals to improve the UX
+
+  /* To request Data remeber that:
+  - We got to initiliaze State
+  - Then in write the fetch in the Mount
+  - Into the fetch define the path of the data and the try-catch
+  - At last set the loader and the error conditionals to improve the UX */
+
   state = {
     loading: true,
     error: null,
     data: undefined,
-    modalIsOpen: false
+    modalIsOpen: false,
   };
   // At this component it mount everything would be rendered
   componentDidMount = () => {
@@ -41,19 +43,16 @@ class BadgeDetailsContainer extends React.Component {
   handleOpenModal = () => {
     this.setState({ modalIsOpen: true });
   };
-  
+
   handleCloseModal = () => {
     this.setState({ modalIsOpen: false });
   };
 
-
-  handleDeleteBadge = async() => {
+  handleDeleteBadge = async () => {
     this.setState({ loading: true });
     try {
-
       await api.badges.remove(this.props.match.params.badgeId);
       this.props.history.push("/badges");
-
     } catch (error) {
       this.setSate({ loading: false, error: error });
     }

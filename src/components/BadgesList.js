@@ -34,7 +34,7 @@ const BadgesList = (props) => {
           <label>Filter Badges</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control input_findSomeone"
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);
@@ -50,12 +50,12 @@ const BadgesList = (props) => {
   }
 
   return (
-    <ul className="list-unstyled">
+    <ul className="list-unstyled container__badge">
       <div className="form-group">
         <label>Filter Badges</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control input_findSomeone"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);

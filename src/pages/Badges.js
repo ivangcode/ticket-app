@@ -24,7 +24,7 @@ class Badges extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.intervalId)
+    clearInterval(this.intervalId);
   }
 
   fetchData = async () => {
@@ -52,7 +52,7 @@ class Badges extends React.Component {
       <React.Fragment>
         <div className="Badges">
           <div className="Badges__hero">
-            <div className="Badges__container">
+            <div className="Badges__logo-container">
               <img
                 src={confLogo}
                 alt="Conf Logo"
@@ -60,16 +60,12 @@ class Badges extends React.Component {
               />
             </div>
           </div>
-        </div>
-        <div className="Badge__container">
-          <div className="Badges__buttons">
-            <Link to="/badges/new" className="btn btn-primary">
+          <div className="Badge__container">
+            <Link to="/badges/new" className="btn btn-primary btn_newBadge">
               New Badge
             </Link>
-          </div>
 
-          <div className="Badges__list">
-            <div className="Badges__container">
+            <div className="Badges__list">
               <BadgesList badges={this.state.data}></BadgesList>
               {this.state.loading && "Loading.."}
             </div>
